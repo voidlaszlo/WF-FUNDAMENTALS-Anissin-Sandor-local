@@ -47,7 +47,7 @@
 
 	<script>
 
-		document.getElementById('input').addEventListener('keydown', function(e) {
+		document.getElementById('input').addEventListener('keyup', function(e) {
 			document.getElementById("lbs").innerHTML=e.target.value*2.2046;
 			document.getElementById("gram").innerHTML=e.target.value*1000;
 			document.getElementById("ctgr").innerHTML=e.target.value*100000;
