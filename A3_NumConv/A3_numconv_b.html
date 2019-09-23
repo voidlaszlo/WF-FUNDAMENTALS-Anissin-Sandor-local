@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title>KG Converter</title>
+	<meta charset='utf-8'>
+<style>
+	div {
+		align: center;
+		text-align: center;
+	}
+	td {
+		border: 1px; 
+		border-style: solid;
+		width: 400px;
+		text-align: center;
+		padding: 3px;
+	}
+	body {
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+	<h1> Number Conversion Tool </h1>
+	 <p>Input a weight in kg: <input type="number" id="input" placeholder="Kilogram">
+	
+	<table align="center">
+		<tr>
+			<td>Pounds (lbs): <span id="lbs"></span></td>
+		</tr>
+		<tr>
+			<td>Grams: <span id="gram"></span></td>
+		</tr>
+		<tr>
+			<td>Centigrams: <span id="ctgr"></span></td>
+		</tr>
+		<tr>
+			<td>Milligrams: <span id="mlgr"></span></td>
+		</tr>
+		<tr>
+			<td>Tons: <span id="tons"></span></td>
+		</tr>
+		<tr>
+			<td>Ounces: <span id="ounc"></span></td>
+		</tr>
+	</table>
+
+	<script>
+
+		document.getElementById('input').addEventListener('keydown', function(e) {
+			document.getElementById("lbs").innerHTML=e.target.value*2.2046;
+			document.getElementById("gram").innerHTML=e.target.value*1000;
+			document.getElementById("ctgr").innerHTML=e.target.value*100000;
+			document.getElementById("mlgr").innerHTML=e.target.value*1000000;
+			document.getElementById("tons").innerHTML=e.target.value*0.001;
+			document.getElementById("ounc").innerHTML=e.target.value*35.27396195;
+		})
+		
+	</script>
+</body>
+</html>
