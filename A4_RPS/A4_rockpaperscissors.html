@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title>Rock Paper Scissors</title>
+	<meta charset='utf-8'>
+<style>
+	body {
+		text-align: center;
+	}
+	#playa {
+		width: 200px;
+		font-size: 17px;
+	}
+	a {
+		text-decoration: none;
+		border-style: solid;
+		border-color: black;
+		border-width: 1px;
+		border-radius: 10px;
+		padding: 10px;
+		color: white;
+		background-image: linear-gradient(blue, black, blue)
+	}
+	a:hover {
+		border-style: solid;
+		border-color: black;
+		border-width: 2px;
+		background-image: linear-gradient(black, blue, black)
+	}
+	button {
+		height: 27px;
+	}
+</style>
+</head>
+<body>
+	<h1> Rock Paper Scissors </h1>
+	<form>
+		<input type="text" name="playa" id="playa" placeholder="Rock, Paper or Scissors?"> 
+	</form>
+		<br>
+		<button type="button" onclick="rps()">Submit</button>
+	<p id="placeh"> Push the "Submit" Button, to see who won!</p>
+	<br>
+	<a href="A4_rockpaperscissors.html">Replay</a>
+	<script>
+	var things = ['Rock', 'Paper', 'Scissors'];
+	var thing = things[Math.floor(Math.random()*things.length)];
+	var placeh = document.getElementById("placeh");
+	function rps() {
+		input = document.getElementById('playa').value
+		if(thing=='Paper' && input=='Rock' || thing=='Rock' && input=='Scissors' || thing=='Scissors' && input=='Paper' || thing=='Paper' && input=='rock' || thing=='Rock' && input=='scissors' || thing=='Scissors' && input=='paper'|| thing=='Paper' && input=='r' || thing=='Rock' && input=='s' || thing=='Scissors' && input=='p'){
+		placeh.innerHTML = "Computer won! The computer chose: "  + thing
+		}
+		else if(input=='Paper' && thing=='Rock' || input=='Rock' && thing=='Scissors' || input=='Scissors' && thing=='Paper' || input=='paper' && thing=='Rock' || input=='rock' && thing=='Scissors' || input=='scissors' && thing=='Paper' || input=='p' && thing=='Rock' || input=='r' && thing=='Scissors' || input=='s' && thing=='Paper') {
+		placeh.innerHTML = "Player won! The computer chose: "  + thing
+		}
+		else {
+		placeh.innerHTML = "It's a tie! (or you didn't put a correct input) The computer chose: "  + thing
+		}
+	}
+	</script>
+</body>
+</html>
